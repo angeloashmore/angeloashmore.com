@@ -2,44 +2,30 @@ import React from 'react'
 import FlexiblePageBodyMetadata from '../../components/FlexiblePageBodyMetadata'
 import FlexiblePageBodyText from '../../components/FlexiblePageBodyText'
 import FlexiblePageBodyImage from '../../components/FlexiblePageBodyImage'
+import FlexiblePageBodyGithubGist from '../../components/FlexiblePageBodyGithubGist'
 import './index.module.css'
 
+const sliceComponents = {
+  FlexiblePageBodyMetadata,
+  FlexiblePageBodyText,
+  FlexiblePageBodyImage,
+  FlexiblePageBodyGithubGist,
+}
+
+const renderSlice = (slice, page) => {
+  const sliceType = slice.__typename.replace('Prismic', '')
+  const SliceComponent = sliceComponents[sliceType]
+
+  if (SliceComponent)
+    return <SliceComponent key={slice.id} slice={slice} page={page} />
+}
+
 const FlexiblePage = ({ data }) => (
-  <div styleName="container">
-    {data.prismicFlexiblePage.data.body.map(slice => {
-      switch (slice.__typename) {
-        case 'PrismicFlexiblePageBodyMetadata':
-          return (
-            <FlexiblePageBodyMetadata
-              key={slice.id}
-              publicationDate={data.prismicFlexiblePage.publicationDate}
-              displayTitle={slice.primary.displayTitle.text}
-              subtitle={slice.primary.subtitle.text}
-            />
-          )
-
-        case 'PrismicFlexiblePageBodyText':
-          return (
-            <FlexiblePageBodyText
-              key={slice.id}
-              text={slice.primary.text.html}
-            />
-          )
-
-        case 'PrismicFlexiblePageBodyImage':
-          return (
-            <FlexiblePageBodyImage
-              key={slice.id}
-              caption={slice.primary.caption.html}
-              imageSizes={slice.primary.image.localFile.childImageSharp.sizes}
-              width={slice.primary.width}
-            />
-          )
-
-          return
-      }
-    })}
-  </div>
+  <main styleName="container">
+    {data.prismicFlexiblePage.data.body.map(slice =>
+      renderSlice(slice, data.prismicFlexiblePage)
+    )}
+  </main>
 )
 
 export default FlexiblePage
@@ -58,6 +44,7 @@ export const query = graphql`
       ...FlexiblePageBodyMetadata
       ...FlexiblePageBodyText
       ...FlexiblePageBodyImage
+      ...FlexiblePageBodyGithubGist
     }
   }
 `

@@ -7,7 +7,7 @@ import './index.css'
 import 'app-reset'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <React.Fragment>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -20,7 +20,7 @@ const Layout = ({ children, data }) => (
       siteDescription={data.site.siteMetadata.description}
     />
     {children()}
-  </div>
+  </React.Fragment>
 )
 
 Layout.propTypes = {
