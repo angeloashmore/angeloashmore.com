@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "app-reset": "^1.0.2",
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.247",
     "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.40",

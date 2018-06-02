@@ -2,7 +2,7 @@
   /* Colors */
   --c-black: #000;
   --c-white: #fff;
-  --c-gray: #999;
+  --c-gray: #777;
 
   /* Font Families */
   --f-primary:   system-ui;
@@ -10,7 +10,7 @@
   /* Line Heights */
   --lh-tight: 1.2;
   --lh:       1.45;
-  --lh-wide:  1.75;
+  --lh-wide:  1.65;
   --lh-xwide: 2;
 
   /* Modular Scale */

@@ -4,11 +4,19 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  padding: var(--ms);
+  padding: var(--ms) var(--ms) 0;
   line-height: 1;
 
   @media (--medium) {
     padding: var(--ms-xlarge);
+  }
+}
+
+.home-link {
+  &:hover {
+    & .title {
+      text-decoration: underline;
+    }
   }
 }
 

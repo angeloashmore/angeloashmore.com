@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import './index.module.css'
 
 const MaxWidth = ({ children, size, className, ...props }) => (
   <div
-    styleName={`container container--${size}`}
+    styleName={cx('container', size !== 'full' && `container--${size}`)}
     className={className}
     {...props}
   >
@@ -20,6 +21,7 @@ MaxWidth.propTypes = {
     'large',
     'xlarge',
     'xxlarge',
+    'full',
   ]),
 }
 

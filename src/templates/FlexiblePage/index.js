@@ -12,7 +12,9 @@ const FlexiblePage = ({ data }) => (
           return (
             <FlexiblePageBodyMetadata
               key={slice.id}
+              publicationDate={data.prismicFlexiblePage.publicationDate}
               displayTitle={slice.primary.displayTitle.text}
+              subtitle={slice.primary.subtitle.text}
             />
           )
 
@@ -28,7 +30,9 @@ const FlexiblePage = ({ data }) => (
           return (
             <FlexiblePageBodyImage
               key={slice.id}
+              caption={slice.primary.caption.html}
               imageSizes={slice.primary.image.localFile.childImageSharp.sizes}
+              width={slice.primary.width}
             />
           )
 
