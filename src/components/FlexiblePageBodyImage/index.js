@@ -15,7 +15,7 @@ export const fragment = graphql`
             image {
               localFile {
                 childImageSharp {
-                  sizes(maxWidth: 1920, quality: 90) {
+                  sizes(maxWidth: 1920, quality: 75) {
                     ...GatsbyImageSharpSizes_withWebp_tracedSVG
                   }
                 }
