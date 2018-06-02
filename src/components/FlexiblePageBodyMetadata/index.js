@@ -7,7 +7,7 @@ const FlexiblePageBodyMetadata = ({ displayTitle }) => (
   <div styleName="container">
     <MaxWidth size="medium">
       <h1 styleName="display-title">{displayTitle}</h1>
-      <span styleName="published-date">Published on June 1, 2018</span>
+      <span styleName="published-date">June 1</span>
     </MaxWidth>
   </div>
 )

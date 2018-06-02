@@ -3,6 +3,7 @@
 html,
 body,
 #___gatsby {
+  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
