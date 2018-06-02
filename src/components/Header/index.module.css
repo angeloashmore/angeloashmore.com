@@ -1,16 +1,23 @@
 @import '../../vars.css';
 
 .container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
   padding: var(--ms);
+  line-height: 1;
+
+  @media (--medium) {
+    padding: var(--ms-xlarge);
+  }
 }
 
 .title {
-  font-family: var(--f-secondary);
   font-size: var(--ms-large);
-  display: inline-block;
-  line-height: 1;
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 100%;
+  font-weight: 600;
+  margin-bottom: var(--ms-xxxsmall);
+}
+
+.description {
+  font-size: var(--ms-small);
 }

@@ -3,13 +3,12 @@ import Link from 'gatsby-link'
 import MaxWidth from '../MaxWidth'
 import './index.module.css'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteDescription }) => (
   <div styleName="container">
-    <MaxWidth>
-      <h1 styleName="title">
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </MaxWidth>
+    <h1 styleName="title">
+      <Link to="/">{siteTitle}</Link>
+    </h1>
+    <p styleName="description">{siteDescription}</p>
   </div>
 )
 

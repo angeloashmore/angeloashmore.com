@@ -2,10 +2,10 @@
   /* Colors */
   --c-black: #000;
   --c-white: #fff;
+  --c-gray: #999;
 
   /* Font Families */
-  --f-primary:   Roboto, sans-serif;
-  --f-secondary: 'Abril Fatface', serif;
+  --f-primary:   system-ui;
 
   /* Line Heights */
   --lh-tight: 1.2;

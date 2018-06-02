@@ -1,0 +1,19 @@
+@import '../../vars.css';
+
+.container {
+  padding: 0 var(--ms);
+}
+
+.display-title {
+  font-size: var(--ms-xlarge);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+}
+
+.published-date {
+  color: var(--c-gray);
+  display: block;
+  font-size: var(--ms-small);
+  font-weight: 300;
+  margin-top: var(--ms-xxsmall);
+}

@@ -4,4 +4,33 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+const path = require('path')
+
+exports.createPages = async ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators
+
+  const result = await graphql(`
+    {
+      allPrismicFlexiblePage {
+        edges {
+          node {
+            id
+            uid
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allPrismicFlexiblePage.edges.forEach(({ node }) => {
+    createPage({
+      path: node.uid,
+      component: path.resolve('./src/templates/FlexiblePage/index.js'),
+      context: {
+        id: node.id,
+      },
+    })
+  })
+
+  return
+}
