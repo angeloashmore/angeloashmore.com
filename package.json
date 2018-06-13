@@ -13,7 +13,8 @@
     "gatsby-transformer-sharp": "^1.6.26",
     "normalize.css": "^8.0.0",
     "react-gist": "^1.2.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-syntax-highlighter": "^7.0.4"
   },
   "scripts": {
     "build": "gatsby build",

@@ -2,6 +2,7 @@ import React from 'react'
 import FlexiblePageBodyMetadata from '../../components/FlexiblePageBodyMetadata'
 import FlexiblePageBodyText from '../../components/FlexiblePageBodyText'
 import FlexiblePageBodyImage from '../../components/FlexiblePageBodyImage'
+import FlexiblePageBodyCode from '../../components/FlexiblePageBodyCode'
 import FlexiblePageBodyGithubGist from '../../components/FlexiblePageBodyGithubGist'
 import './index.module.css'
 
@@ -9,6 +10,7 @@ const sliceComponents = {
   FlexiblePageBodyMetadata,
   FlexiblePageBodyText,
   FlexiblePageBodyImage,
+  FlexiblePageBodyCode,
   FlexiblePageBodyGithubGist,
 }
 
@@ -44,6 +46,7 @@ export const query = graphql`
       ...FlexiblePageBodyMetadata
       ...FlexiblePageBodyText
       ...FlexiblePageBodyImage
+      ...FlexiblePageBodyCode
       ...FlexiblePageBodyGithubGist
     }
   }
