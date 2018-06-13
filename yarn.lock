@@ -4491,7 +4491,7 @@ gatsby-node-helpers@^0.3.0:
     lodash "^4.17.4"
     p-is-promise "^1.1.0"
 
-gatsby-plugin-react-css-modules@next:
+gatsby-plugin-react-css-modules@^2.0.0-alpha.14:
   version "2.0.0-alpha.14"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-css-modules/-/gatsby-plugin-react-css-modules-2.0.0-alpha.14.tgz#a203fa4d8ad2c0d0ea83ad633dfe090bceae7a97"
   dependencies:
@@ -8199,6 +8199,15 @@ react-syntax-highlighter@^7.0.4:
     lowlight "~1.9.1"
     prismjs "^1.8.4"
     refractor "^2.4.1"
+
+react@^16.4.0:
+  version "16.4.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.0.tgz#402c2db83335336fba1962c08b98c6272617d585"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
