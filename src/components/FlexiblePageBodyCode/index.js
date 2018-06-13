@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import MaxWidth from '../MaxWidth'
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light'
 import { javascript, yaml } from 'react-syntax-highlighter/languages/prism'

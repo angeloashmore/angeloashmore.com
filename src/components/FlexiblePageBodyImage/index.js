@@ -8,7 +8,7 @@ const FlexiblePageBodyImage = ({ slice }) => (
     <MaxWidth size={slice.primary.width}>
       <Img
         styleName="image"
-        sizes={slice.primary.image.localFile.childImageSharp.sizes}
+        fluid={slice.primary.image.localFile.childImageSharp.fluid}
       />
       {slice.primary.caption && (
         <div styleName="caption">
@@ -35,8 +35,8 @@ export const fragment = graphql`
             image {
               localFile {
                 childImageSharp {
-                  sizes(maxWidth: 1920, quality: 75) {
-                    ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                  fluid(maxWidth: 1920, quality: 75) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }

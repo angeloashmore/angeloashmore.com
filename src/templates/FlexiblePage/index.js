@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../../components/Layout'
 import FlexiblePageBodyMetadata from '../../components/FlexiblePageBodyMetadata'
 import FlexiblePageBodyText from '../../components/FlexiblePageBodyText'
 import FlexiblePageBodyImage from '../../components/FlexiblePageBodyImage'
@@ -23,11 +24,13 @@ const renderSlice = (slice, page) => {
 }
 
 const FlexiblePage = ({ data }) => (
-  <main styleName="container">
-    {data.prismicFlexiblePage.data.body.map(slice =>
-      renderSlice(slice, data.prismicFlexiblePage)
-    )}
-  </main>
+  <Layout>
+    <main styleName="container">
+      {data.prismicFlexiblePage.data.body.map(slice =>
+        renderSlice(slice, data.prismicFlexiblePage)
+      )}
+    </main>
+  </Layout>
 )
 
 export default FlexiblePage

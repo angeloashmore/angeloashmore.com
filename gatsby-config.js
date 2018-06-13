@@ -8,7 +8,6 @@ module.exports = {
     description: 'A collection of things',
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
