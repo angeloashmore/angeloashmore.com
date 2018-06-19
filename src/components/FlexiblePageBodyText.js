@@ -1,6 +1,5 @@
 import React from 'react'
-import MaxWidth from '../MaxWidth'
-import './index.module.css'
+import MaxWidth from './MaxWidth'
 
 const FlexiblePageBodyText = ({ slice }) => (
   <section styleName="container">
@@ -16,14 +15,16 @@ const FlexiblePageBodyText = ({ slice }) => (
 export default FlexiblePageBodyText
 
 export const fragment = graphql`
-  fragment FlexiblePageBodyText on PrismicFlexiblePage {
-    data {
-      body {
-        ... on PrismicFlexiblePageBodyText {
-          id
-          primary {
-            text {
-              html
+  fragment FlexiblePageBodyText on RootQueryType {
+    prismicFlexiblePage(id: { eq: $id }) {
+      data {
+        body {
+          ... on PrismicFlexiblePageBodyText {
+            id
+            primary {
+              text {
+                html
+              }
             }
           }
         }

@@ -1,6 +1,5 @@
 import React from 'react'
-import MaxWidth from '../MaxWidth'
-import './index.module.css'
+import MaxWidth from './MaxWidth'
 
 const FlexiblePageBodyMetadata = ({ slice, page }) => (
   <section styleName="container">
@@ -21,19 +20,21 @@ const FlexiblePageBodyMetadata = ({ slice, page }) => (
 export default FlexiblePageBodyMetadata
 
 export const fragment = graphql`
-  fragment FlexiblePageBodyMetadata on PrismicFlexiblePage {
-    publicationDate: first_publication_date(formatString: "MMMM D")
-    publicationDateYear: first_publication_date(formatString: "YYYY")
-    data {
-      body {
-        ... on PrismicFlexiblePageBodyMetadata {
-          id
-          primary {
-            displayTitle: display_title {
-              text
-            }
-            subtitle {
-              text
+  fragment FlexiblePageBodyMetadata on RootQueryType {
+    prismicFlexiblePage(id: { eq: $id }) {
+      publicationDate: first_publication_date(formatString: "MMMM D")
+      publicationDateYear: first_publication_date(formatString: "YYYY")
+      data {
+        body {
+          ... on PrismicFlexiblePageBodyMetadata {
+            id
+            primary {
+              displayTitle: display_title {
+                text
+              }
+              subtitle {
+                text
+              }
             }
           }
         }

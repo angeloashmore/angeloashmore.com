@@ -1,22 +1,19 @@
 {
   "dependencies": {
     "app-reset": "^1.0.2",
-    "babel-plugin-react-css-modules": "^3.4.2",
     "classnames": "^2.2.5",
     "gatsby": "next",
     "gatsby-image": "next",
-    "gatsby-link": "^1.6.44",
-    "gatsby-plugin-react-css-modules": "^2.0.0-alpha.14",
+    "gatsby-link": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-source-prismic": "next",
     "gatsby-transformer-sharp": "next",
-    "normalize.css": "^8.0.0",
+    "invariant": "^2.2.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-gist": "^1.2.1",
-    "react-helmet": "^5.2.0",
-    "react-syntax-highlighter": "^7.0.4"
+    "react-helmet": "^5.2.0"
   },
   "scripts": {
     "build": "gatsby build",

@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import './index.module.css'
 
 const Header = ({ siteTitle, siteDescription }) => (
   <header styleName="container">

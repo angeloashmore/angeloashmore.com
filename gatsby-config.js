@@ -11,16 +11,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-react-css-modules',
-      options: {
-        filetypes: {
-          '.css': {
-            plugins: ['postcss-cssnext'],
-          },
-        },
-      },
-    },
-    {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
