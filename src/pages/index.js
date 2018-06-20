@@ -11,7 +11,10 @@ const IndexPage = ({ data }) => {
         <ul>
           {pages.map(page => (
             <li>
-              <Link to={`/${page.uid}`} className="no-underline underline-hover color-inherit">
+              <Link
+                to={`/${page.uid}`}
+                className="no-underline underline-hover color-inherit"
+              >
                 <h2 className="dib">{page.data.title.text}</h2>
               </Link>
             </li>
