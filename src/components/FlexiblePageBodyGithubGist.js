@@ -1,12 +1,9 @@
 import React from 'react'
 import Gist from 'react-gist'
-import MaxWidth from './MaxWidth'
 
 const FlexiblePageBodyGithubGist = ({ slice }) => (
-  <section styleName="container">
-    <MaxWidth size="medium">
-      <Gist id={slice.primary.gist.gist.split('/')[1]} />
-    </MaxWidth>
+  <section className="center mw7 ph3">
+    <Gist id={slice.primary.gist.gist.split('/')[1]} />
   </section>
 )
 

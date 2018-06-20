@@ -13,7 +13,7 @@ const componentsMap = {
 }
 
 const FlexiblePageLayoutBody = ({ data, page }) => (
-  <main>
+  <main className="mv4 mv5-ns">
     <Slices
       componentsMap={componentsMap}
       data={data}

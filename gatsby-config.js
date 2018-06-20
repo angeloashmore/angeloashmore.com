@@ -4,7 +4,7 @@ dotenv.config()
 
 module.exports = {
   siteMetadata: {
-    title: 'Angelo Ashmore',
+    title: 'a11e',
     description: 'A collection of things',
   },
   plugins: [

@@ -1,14 +1,11 @@
 import React from 'react'
-import MaxWidth from './MaxWidth'
 
 const FlexiblePageBodyText = ({ slice }) => (
-  <section styleName="container">
-    <MaxWidth size="medium">
-      <div
-        styleName="text"
-        dangerouslySetInnerHTML={{ __html: slice.primary.text.html }}
-      />
-    </MaxWidth>
+  <section className="center mw7 ph3 mb4 mb5-ns">
+    <div
+      className="lh-copy f4-ns"
+      dangerouslySetInnerHTML={{ __html: slice.primary.text.html }}
+    />
   </section>
 )
 

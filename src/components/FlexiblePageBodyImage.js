@@ -1,24 +1,28 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import MaxWidth from './MaxWidth'
+import cx from 'classnames'
 
 const FlexiblePageBodyImage = ({ slice }) => (
-  <section styleName="container">
-    <MaxWidth size={slice.primary.width}>
-      <Img
-        styleName="image"
-        fluid={slice.primary.image.localFile.childImageSharp.fluid}
+  <section
+    className={cx([
+      'center',
+      slice.primary.width === 'medium' && 'mw7',
+      slice.primary.width === 'large' && 'mw8',
+      'mb4',
+      'mb5-ns',
+      slice.primary.width !== 'full' && 'ph3',
+    ])}
+  >
+    <Img
+      fluid={slice.primary.image.localFile.childImageSharp.fluid}
+      alt={slice.primary.image.alt}
+    />
+    {slice.primary.caption && (
+      <div
+        className="center ph3 tc caption mw7 f7 f6-ns gray lh-copy"
+        dangerouslySetInnerHTML={{ __html: slice.primary.caption.html }}
       />
-      {slice.primary.caption && (
-        <div styleName="caption">
-          <MaxWidth size="large">
-            <div
-              dangerouslySetInnerHTML={{ __html: slice.primary.caption.html }}
-            />
-          </MaxWidth>
-        </div>
-      )}
-    </MaxWidth>
+    )}
   </section>
 )
 
@@ -33,6 +37,7 @@ export const fragment = graphql`
             id
             primary {
               image {
+                alt
                 localFile {
                   childImageSharp {
                     fluid(maxWidth: 1920, quality: 75) {

@@ -3,7 +3,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery } from 'gatsby'
 import Header from './Header'
 
-import 'app-reset'
+import '../index.css'
+import 'tachyons'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -18,9 +19,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <React.Fragment>
+      <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          titleTemplate={`%s – ${data.site.siteMetadata.title}`}
+          defaultTitle={data.site.siteMetadata.title}
           meta={[
             {
               name: 'description',
@@ -29,12 +31,11 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          siteDescription={data.site.siteMetadata.description}
-        />
-        {children}
-      </React.Fragment>
+        <div className="sans-serif">
+          <Header />
+          {children}
+        </div>
+      </>
     )}
   />
 )
