@@ -16,7 +16,7 @@ const Header = () => (
     render={data => (
       <header className="flex justify-center center pa3 pb0">
         <Link className="color-inherit no-underline underline-hover" to="/">
-          <h1 className="ma0 f3 fw6">{data.site.siteMetadata.title}</h1>
+          <h1 className="ma0 f3 fw6 code">{data.site.siteMetadata.title}</h1>
         </Link>
       </header>
     )}
