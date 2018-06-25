@@ -3,13 +3,13 @@ import Link from 'gatsby-link'
 import Layout from '../components/Layout'
 
 const IndexPage = ({ data }) => {
-  const pages = data.allPrismicFlexiblePage.edges.map(edge => edge.node)
+  const articles = data.articles.edges.map(edge => edge.node)
 
   return (
     <Layout>
       <main className="center mw7 ph3">
         <ul>
-          {pages.map(page => (
+          {articles.map(page => (
             <li>
               <Link
                 to={`/${page.uid}`}
@@ -29,7 +29,7 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allPrismicFlexiblePage {
+    articles: allPrismicFlexiblePage(filter: { tags: { eq: "article" } }) {
       edges {
         node {
           uid
