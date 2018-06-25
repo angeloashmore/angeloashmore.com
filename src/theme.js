@@ -3,28 +3,24 @@ import ms from 'modularscale'
 const MS_SCALE = 'augmented fourth'
 
 const theme = {
-  // Colors
-  c: {
+  colors: {
     primary: '#000',
     secondary: '#fff',
     tertiary: '#888',
     yellow: 'gold',
   },
-  fontFamily: {
-    primary: 'Roboto, sans-serif',
-    secondary: "'Space Mono', monospace",
-  },
-  // Line heights
-  lh: {
+  lineHeights: {
     xWide: 2,
     wide: 1.5,
     base: 1.45,
     tight: 1.3,
   },
-  // Font sizes
-  f: step => ms(step / 2, MS_SCALE) + 'rem',
-  // Media sizes
-  ms: {
+  fontFamilies: {
+    primary: 'Roboto, sans-serif',
+    secondary: "'Space Mono', monospace",
+  },
+  fontSize: step => ms(step / 2, MS_SCALE) + 'rem',
+  mediaSizes: {
     xSmall: '400px',
     small: '500px',
     m: '48rem',
@@ -32,15 +28,30 @@ const theme = {
     xLarge: '1100px',
     xxLarge: '1600px',
   },
-  radius: step => ms(step, MS_SCALE) + 'rem',
-  // Spacing
-  s: (...steps) => steps.map(s => typeof s === 'number' ? ms(s, MS_SCALE) + 'rem' : s).join(' '),
+  radius: (...steps) =>
+    steps
+      .map(s => (typeof s === 'number' ? ms(s, MS_SCALE) + 'rem' : s))
+      .join(' '),
+  spacing: (...steps) =>
+    steps
+      .map(s => (typeof s === 'number' ? ms(s, MS_SCALE) + 'rem' : s))
+      .join(' '),
   transition: '200ms',
 }
 
-theme.mq = Object.keys(theme.ms).reduce((acc, curr) => {
+theme.mediaQueries = Object.keys(theme.ms).reduce((acc, curr) => {
   acc[curr] = `@media (min-width: ${theme.ms[curr]}px)`
   return acc
 }, {})
+
+// Shortcuts
+theme.c = theme.colors
+theme.f = theme.fontSize
+theme.lh = theme.lineHeights
+theme.mq = theme.mediaQueries
+theme.ms = theme.mediaSizes
+theme.r = theme.radius
+theme.s = theme.spacing
+theme.t = theme.transition
 
 export default theme
