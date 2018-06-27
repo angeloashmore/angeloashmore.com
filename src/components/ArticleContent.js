@@ -39,12 +39,13 @@ const Container = styled.div`
   pre {
     -webkit-overflow-scrolling: touch;
     border-radius: ${t.r(-5)};
-    line-height: ${t.lh.base};
+    line-height: ${t.lh.medium};
     margin: ${t.s(2)} 0;
     padding: ${t.s(0)};
 
     code {
       border-radius: 0;
+      font-size: ${t.f(-2)};
       padding: 0;
     }
 

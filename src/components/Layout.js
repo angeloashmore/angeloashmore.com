@@ -7,7 +7,7 @@ import Header from './Header'
 
 import 'app-reset'
 import 'typeface-roboto'
-import 'typeface-space-mono'
+import 'typeface-roboto-mono'
 import '../index.css'
 import '../syntax.css'
 

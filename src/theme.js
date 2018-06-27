@@ -12,12 +12,13 @@ const theme = {
   lineHeights: {
     xWide: 2,
     wide: 1.6,
+    medium: 1.5,
     base: 1.3,
     tight: 1.15,
   },
   fontFamilies: {
     primary: 'Roboto, sans-serif',
-    secondary: "'Space Mono', monospace",
+    secondary: "'Roboto Mono', monospace",
   },
   fontSize: step => ms(step / 2, MS_SCALE) + 'rem',
   mediaSizes: {
