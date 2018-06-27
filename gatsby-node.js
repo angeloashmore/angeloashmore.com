@@ -11,23 +11,23 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allPrismicFlexiblePage {
+      allMarkdownRemark {
         edges {
           node {
             id
-            uid
+            frontmatter {
+              slug
+            }
           }
         }
       }
     }
   `)
 
-  result.data.allPrismicFlexiblePage.edges.forEach(({ node }) => {
-    if (node.uid.startsWith('_')) return
-
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.uid,
-      component: path.resolve('./src/templates/FlexiblePage.js'),
+      path: node.frontmatter.slug,
+      component: path.resolve('./src/templates/article.js'),
       context: {
         id: node.id,
       },

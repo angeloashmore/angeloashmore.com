@@ -3,19 +3,19 @@ import Link from 'gatsby-link'
 import Layout from '../components/Layout'
 
 const IndexPage = ({ data }) => {
-  const articles = data.articles.edges.map(edge => edge.node)
+  const articles = data.allMarkdownRemark.edges.map(edge => edge.node)
 
   return (
     <Layout>
       <main className="center mw7 ph3">
         <ul>
-          {articles.map(page => (
-            <li>
+          {articles.map(article => (
+            <li key={article.id}>
               <Link
-                to={`/${page.uid}`}
+                to={`/${article.frontmatter.slug}`}
                 className="no-underline underline-hover color-inherit"
               >
-                <h2 className="dib">{page.data.title.text}</h2>
+                <h2 className="dib">{article.frontmatter.title}</h2>
               </Link>
             </li>
           ))}
@@ -29,14 +29,13 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    articles: allPrismicFlexiblePage(filter: { tags: { eq: "article" } }) {
+    allMarkdownRemark {
       edges {
         node {
-          uid
-          data {
-            title {
-              text
-            }
+          id
+          frontmatter {
+            slug
+            title
           }
         }
       }
