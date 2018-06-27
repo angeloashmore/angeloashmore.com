@@ -1,10 +1,23 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery } from 'gatsby'
+import { css } from 'emotion'
 import Header from './Header'
+import t from '../theme'
 
+import 'app-reset'
+import 'typeface-roboto'
+import 'typeface-space-mono'
 import '../index.css'
-import 'tachyons'
+import '../syntax.css'
+
+const styles = {
+  container: css`
+    color: ${t.c.primary};
+    font-family: ${t.ff.primary};
+    line-height: ${t.lh.base};
+  `,
+}
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +44,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <div className="sans-serif">
+        <div className={styles.container}>
           <Header />
           {children}
         </div>

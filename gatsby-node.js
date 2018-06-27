@@ -19,15 +19,35 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
     }
   `)
 
-  result.data.allPrismicFlexiblePage.edges.forEach(({ node }) => {
-    if (node.uid.startsWith('_')) return
+  // result.data.allPrismicFlexiblePage.edges.forEach(({ node }) => {
+  //   if (node.uid.startsWith('_')) return
 
+  //   createPage({
+  //     path: node.uid,
+  //     component: path.resolve('./src/templates/FlexiblePage.js'),
+  //     context: {
+  //       id: node.id,
+  //     },
+  //   })
+  // })
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.uid,
-      component: path.resolve('./src/templates/FlexiblePage.js'),
+      path: node.frontmatter.slug,
+      component: path.resolve('./src/templates/article.js'),
       context: {
         id: node.id,
       },
