@@ -1,7 +1,4 @@
 const path = require('path')
-const dotenv = require('dotenv')
-
-dotenv.config()
 
 module.exports = {
   siteMetadata: {
@@ -17,13 +14,6 @@ module.exports = {
       options: {
         name: 'articles',
         path: path.resolve(__dirname, 'src', 'content', 'articles'),
-      },
-    },
-    {
-      resolve: 'gatsby-source-prismic',
-      options: {
-        repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
-        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
     {
