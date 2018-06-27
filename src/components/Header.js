@@ -46,7 +46,7 @@ const NameLink = styled(Link)`
 `
 
 const Name = styled.h1`
-  font-family: ${t.ff.secondary};
+  font-family: ${t.ff.mono};
   font-size: ${t.f(2)};
   font-weight: 600;
 `

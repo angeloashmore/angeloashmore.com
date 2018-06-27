@@ -6,19 +6,20 @@ const theme = {
   colors: {
     primary: '#222',
     secondary: '#fff',
-    tertiary: '#888',
+    tertiary: '#777',
     yellow: 'gold',
   },
   lineHeights: {
     xWide: 2,
     wide: 1.6,
-    medium: 1.5,
+    medium: 1.4,
     base: 1.3,
     tight: 1.15,
   },
   fontFamilies: {
-    primary: 'Roboto, sans-serif',
-    secondary: "'Roboto Mono', monospace",
+    serif: "'Libre Baskerville', sans-serif",
+    sans: 'Roboto, monospace',
+    mono: "'Roboto Mono', monospace",
   },
   fontSize: step => ms(step / 2, MS_SCALE) + 'rem',
   mediaSizes: {

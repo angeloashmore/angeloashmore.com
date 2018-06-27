@@ -8,12 +8,26 @@ date: 2018-06-24
 Vivamus sagittis lacus vel augue laoreet `rutrum faucibus` dolor auctor. Lorem
 ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
 ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
-amet non magna. Donec id elit non mi porta gravida at eget metus.
+amet non magna. Donec id elit non mi porta gravida [at eget metus](/).
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus
-magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Aenean lacinia
-bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod
-semper.Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum
+# But first, a disclaimer
+
+Before you run off to cancel your Netlify subscription and tweet all your
+friends about this new hotness, you should know I don't actually recommend you
+use Drone over Netlify if you don't need to.
+
+Netlify provides a ton of great features with lots of polish with the intent of
+lessening the development effort on your part. Using Drone means **you** now
+need to manage your whole build and deploy process. Maybe you need that kind of
+control. But maybe you don't.
+
+It's better if you don't need to use Drone, trust me.
+
+With that out of the way, let's get on to the cool configuration stuff.
+
+# Setting up your `.drone.yml`
+
+Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum
 dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida
 at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
 auctor.
@@ -49,9 +63,13 @@ pipeline:
       - /tmp/cache:/cache
 ```
 
+## Disclaimer on usage
+
 Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget
 metus.
+
+### Just kidding
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
 ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur

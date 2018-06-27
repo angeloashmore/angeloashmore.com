@@ -8,6 +8,8 @@ import Header from './Header'
 import 'app-reset'
 import 'typeface-roboto'
 import 'typeface-roboto-mono'
+import 'typeface-libre-franklin'
+import 'typeface-libre-baskerville'
 import '../index.css'
 import '../syntax.css'
 
@@ -49,6 +51,6 @@ export default Layout
 
 const Container = styled.div`
   color: ${t.c.primary};
-  font-family: ${t.ff.primary};
+  font-family: ${t.ff.sans};
   line-height: ${t.lh.base};
 `
