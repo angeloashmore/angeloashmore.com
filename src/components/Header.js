@@ -1,31 +1,8 @@
 import React from 'react'
+import styled from 'react-emotion'
 import { StaticQuery } from 'gatsby'
 import Link from 'gatsby-link'
-import { css } from 'emotion'
 import t from '../theme'
-
-const styles = {
-  container: css`
-    display: flex;
-    justify-content: center;
-    padding: ${t.s(1)} ${t.s(0)} 0;
-    margin-bottom: ${t.s(1)};
-
-    ${t.mq.m} {
-      margin-bottom: ${t.s(4)};
-    }
-  `,
-  link: css`
-    &:hover {
-      text-decoration: underline;
-    }
-  `,
-  name: css`
-    font-family: ${t.ff.secondary};
-    font-size: ${t.f(2)};
-    font-weight: 600;
-  `,
-}
 
 const Header = () => (
   <StaticQuery
@@ -39,13 +16,37 @@ const Header = () => (
       }
     `}
     render={data => (
-      <header className={styles.container}>
-        <Link className={styles.link} to="/">
-          <h1 className={styles.name}>{data.site.siteMetadata.title}</h1>
-        </Link>
-      </header>
+      <Container>
+        <NameLink to="/">
+          <Name>{data.site.siteMetadata.title}</Name>
+        </NameLink>
+      </Container>
     )}
   />
 )
 
 export default Header
+
+const Container = styled.header`
+  display: flex;
+  justify-content: center;
+  padding: ${t.s(1)} ${t.s(0)} 0;
+  margin-bottom: ${t.s(1)};
+
+  ${t.mq.m} {
+    padding-bottom: ${t.s(2)};
+    padding-top: ${t.s(2)};
+  }
+`
+
+const NameLink = styled(Link)`
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+const Name = styled.h1`
+  font-family: ${t.ff.secondary};
+  font-size: ${t.f(2)};
+  font-weight: 600;
+`

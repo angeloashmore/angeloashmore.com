@@ -1,18 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/Layout'
+import styled from 'react-emotion'
 import ArticleContent from '../components/ArticleContent'
 import ArticleMetadata from '../components/ArticleMetadata'
-import { css } from 'emotion'
+import Layout from '../components/Layout'
 import t from '../theme'
-
-const styles = {
-  article: css`
-    margin: 0 auto;
-    max-width: ${t.ms.m};
-    padding: 0 ${t.s(0)};
-  `,
-}
 
 const ArticleTemplate = ({ data }) => {
   const article = data.markdownRemark
@@ -21,7 +13,7 @@ const ArticleTemplate = ({ data }) => {
     <>
       <Helmet title={article.frontmatter.title} />
       <Layout>
-        <div className={styles.article}>
+        <Container>
           <ArticleMetadata
             title={article.frontmatter.title}
             subtitle={article.frontmatter.subtitle}
@@ -29,7 +21,7 @@ const ArticleTemplate = ({ data }) => {
             timeToRead={article.timeToRead}
           />
           <ArticleContent html={article.html} />
-        </div>
+        </Container>
       </Layout>
     </>
   )
@@ -48,4 +40,10 @@ export const query = graphql`
     ...ArticleMetadata
     ...ArticleContent
   }
+`
+
+const Container = styled.article`
+  margin: 0 auto;
+  max-width: ${t.ms.m};
+  padding: 0 ${t.s(0)};
 `

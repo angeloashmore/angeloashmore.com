@@ -1,8 +1,22 @@
 import React from 'react'
-import { css } from 'emotion'
+import styled from 'react-emotion'
 import t from '../theme'
 
-const style = css`
+const ArticleContent = ({ html }) => (
+  <Container dangerouslySetInnerHTML={{ __html: html }} />
+)
+
+export default ArticleContent
+
+export const fragment = graphql`
+  fragment ArticleContent on RootQueryType {
+    markdownRemark(id: { eq: $id }) {
+      html
+    }
+  }
+`
+
+const Container = styled.div`
   line-height: ${t.lh.wide};
 
   ${t.mq.m} {
@@ -46,20 +60,6 @@ const style = css`
 
     ${t.mq.m} {
       margin-bottom: ${t.s(1)};
-    }
-  }
-`
-
-const ArticleContent = ({ html }) => (
-  <div className={style} dangerouslySetInnerHTML={{ __html: html }} />
-)
-
-export default ArticleContent
-
-export const fragment = graphql`
-  fragment ArticleContent on RootQueryType {
-    markdownRemark(id: { eq: $id }) {
-      html
     }
   }
 `

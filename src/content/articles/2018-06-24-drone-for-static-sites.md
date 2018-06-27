@@ -19,6 +19,8 @@ at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
 auctor.
 
 ```yaml
+# .drone.yml
+
 branches:
   - development
 
@@ -45,6 +47,23 @@ pipeline:
       - ./www/node_modules
     volumes:
       - /tmp/cache:/cache
+```
+
+Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget
+metus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+et. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non
+commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+```yaml
+# .drone.yml
+
+pipeline:
+
+  # ...
 
   docker-dind:
     image: docker:stable-dind
