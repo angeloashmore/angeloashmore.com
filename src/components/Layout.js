@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'react-emotion'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import t from '../theme'
 import Header from './Header'
 

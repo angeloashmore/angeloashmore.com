@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'react-emotion'
+import { graphql } from 'gatsby'
 import ArticleAuthor from '../components/ArticleAuthor'
 import ArticleContent from '../components/ArticleContent'
 import ArticleTitle from '../components/ArticleTitle'
@@ -18,7 +19,9 @@ const ArticleTemplate = ({ data }) => {
           <StyledArticleAuthor
             articleDate={article.frontmatter.date}
             articleTimeToRead={article.timeToRead}
-            avatar="https://www.gravatar.com/avatar/52f4cd57f86f9769ca7a9025a4e59d64"
+            name={data.site.siteMetadata.authorName}
+            description={data.site.siteMetadata.authorDescription}
+            avatarFluid={data.avatar.childImageSharp.fluid}
           />
           <StyledArticleTitle
             title={article.frontmatter.title}

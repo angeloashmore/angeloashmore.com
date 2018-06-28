@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
-import { StaticQuery } from 'gatsby'
-import Link from 'gatsby-link'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import t from '../theme'
 
 const Header = () => (
