@@ -19,9 +19,9 @@ const ArticleTemplate = ({ data }) => {
           <StyledArticleAuthor
             articleDate={article.frontmatter.date}
             articleTimeToRead={article.timeToRead}
-            name={data.site.siteMetadata.authorName}
-            description={data.site.siteMetadata.authorDescription}
             avatarFluid={data.avatar.childImageSharp.fluid}
+            description={data.site.siteMetadata.authorDescription}
+            name={data.site.siteMetadata.authorName}
           />
           <StyledArticleTitle
             title={article.frontmatter.title}
