@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'react-emotion'
 import t from '../theme'
 
-const ArticleContent = ({ html }) => (
-  <Container dangerouslySetInnerHTML={{ __html: html }} />
+const ArticleContent = ({ html, ...props }) => (
+  <Container dangerouslySetInnerHTML={{ __html: html }} {...props} />
 )
 
 export default ArticleContent
@@ -95,6 +95,6 @@ const Container = styled.div`
   ul,
   ol,
   blockquote {
-    margin: ${t.s('0', '0', 0)}
+    margin: ${t.s('0', '0', 0)};
   }
 `

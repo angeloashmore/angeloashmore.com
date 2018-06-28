@@ -1126,10 +1126,6 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-app-reset@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/app-reset/-/app-reset-1.0.2.tgz#36620a2624bc9b6ddfcb1a90337b8c167071f7a3"
-
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -6569,10 +6565,6 @@ lodash.isequal@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
-lodash.isnumber@^3.0.0:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lodash.isnumber/-/lodash.isnumber-3.0.3.tgz#3ce76810c5928d03352301ac287317f11c0b1ffc"
-
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -7081,12 +7073,6 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
 modern-normalize@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-0.5.0.tgz#7f75bb7319c6ae708d716658dc8d9c9760274887"
-
-modularscale@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/modularscale/-/modularscale-2.0.1.tgz#565806fe7e3a9d31821ec4e944fbe9c8401cafd0"
-  dependencies:
-    lodash.isnumber "^3.0.0"
 
 moment@^2.21.0:
   version "2.22.2"
@@ -7908,10 +7894,6 @@ pngquant-bin@^4.0.0:
     bin-wrapper "^3.0.0"
     execa "^0.10.0"
     logalot "^2.0.0"
-
-polished@^1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.2.tgz#d705cac66f3a3ed1bd38aad863e2c1e269baf6b6"
 
 portfinder@^1.0.9:
   version "1.0.13"
