@@ -18,79 +18,62 @@ export const fragment = graphql`
 
 const Container = styled.div`
   font-family: ${t.ff.serif};
-  line-height: ${t.lh.wide};
+  font-size: ${t.f(-0.5)};
+  line-height: ${t.lh.copy};
+
+  ${t.mq.m} {
+    font-size: ${t.f(0.5)};
+  }
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: ${t.ff.sans};
+    font-weight: 600;
+    line-height: ${t.lh.title};
+    margin-bottom: ${t.s(-2)};
+    margin-top: ${t.s(1)};
+
+    ${t.mq.m} {
+      margin-top: ${t.s(2)};
+    }
+
+    code {
+      font-size: 0.85em;
+    }
   }
 
   h1 {
     font-size: ${t.f(3)};
-    font-weight: 600;
-    margin-bottom: ${t.s(-3)};
-    margin-top: ${t.s(1)};
-
-    ${t.mq.m} {
-      margin-top: ${t.s(2)};
-    }
-
-    code {
-      font-size: ${t.f(2)};
-    }
   }
 
   h2 {
     font-size: ${t.f(1)};
-    font-weight: 600;
-    margin-bottom: ${t.s(-3)};
-    margin-top: ${t.s(1)};
-
-    ${t.mq.m} {
-      margin-top: ${t.s(2)};
-    }
-
-    code {
-      font-size: ${t.f(2)};
-    }
   }
 
   h3 {
     font-size: ${t.f(-1)};
-    font-weight: 600;
-    margin-bottom: ${t.s(-3)};
-    margin-top: ${t.s(1)};
-
-    ${t.mq.m} {
-      margin-top: ${t.s(2)};
-    }
-
-    code {
-      font-size: ${t.f(2)};
-    }
   }
 
   a {
-    text-decoration: underline;
+    color: inherit;
   }
 
   code {
-    font-family: ${t.ff.mono};
-    font-size: ${t.f(-1)};
-    padding: 0 ${t.s(-3)};
     border-radius: ${t.r(-10)};
-
-    ${t.mq.m} {
-      font-size: ${t.f(0)};
-    }
+    font-family: ${t.ff.mono};
+    font-size: 0.9em;
+    padding: ${t.s('0', -3)};
   }
 
   pre {
     -webkit-overflow-scrolling: touch;
     border-radius: ${t.r(-5)};
-    line-height: ${t.lh.medium};
-    margin: ${t.s(2)} 0;
+    line-height: ${t.lh.code};
+    margin: ${t.s(2, '0')};
     padding: ${t.s(0)};
 
     ${t.mq.m} {
@@ -99,23 +82,19 @@ const Container = styled.div`
 
     code {
       border-radius: 0;
-      font-size: ${t.f(-3)};
+      font-size: ${t.f(-2)};
       padding: 0;
 
       ${t.mq.m} {
-        font-size: ${t.f(-2)};
+        font-size: ${t.f(-1)};
       }
     }
   }
 
-  p {
-    font-family: ${t.ff.serif};
-    margin-bottom: ${t.s(0)};
-    font-size: ${t.f(-0.5)};
-    line-height: 1.8;
-
-    ${t.mq.m} {
-      font-size: ${t.f(0.5)};
-    }
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin: ${t.s('0', '0', 0)}
   }
 `

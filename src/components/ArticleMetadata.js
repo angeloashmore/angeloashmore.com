@@ -47,7 +47,7 @@ const Container = styled.div`
 
 const Author = styled.div`
   align-items: center;
-  color: ${t.c.tertiary};
+  color: ${t.c.secondary};
   display: flex;
   font-size: ${t.f(-1)};
   margin-bottom: ${t.s(1)};
@@ -80,19 +80,21 @@ const AuthorMetadata = styled.div`
 const AuthorMetadataName = styled.p`
   color: ${t.c.primary};
   font-size: ${t.f(-1)};
+  font-weight: 600;
+  margin: 0;
 `
 
 const AuthorMetadataDescription = styled.p`
   font-size: ${t.f(-1)};
-  line-height: ${t.lh.medium};
-  margin: ${t.s(-5)} 0;
+  line-height: ${t.lh.copy};
+  margin: ${t.s(-5, '0')};
 `
 
 const AuthorMetadataArticleDate = styled.span`
   &::after {
     content: '\u2219';
-    margin: 0 ${t.s(-4)};
     display: inline-block;
+    margin: ${t.s('0', -4)};
   }
 `
 
@@ -101,6 +103,8 @@ const AuthorMetadataArticleTimeToRead = styled.span``
 const Title = styled.h2`
   font-size: ${t.f(4)};
   font-weight: 600;
+  line-height: ${t.lh.title};
+  margin: 0;
 
   ${t.mq.m} {
     font-size: ${t.f(5)};
@@ -108,8 +112,11 @@ const Title = styled.h2`
 `
 
 const Subtitle = styled.h3`
-  color: ${t.c.tertiary};
+  color: ${t.c.secondary};
   font-size: ${t.f(1)};
+  font-weight: normal;
+  line-height: ${t.lh.title};
+  margin: ${t.s(-5, '0', '0')};
 
   ${t.mq.m} {
     font-size: ${t.f(2)};

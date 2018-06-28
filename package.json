@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "app-reset": "^1.0.2",
     "emotion": "^9.2.3",
     "emotion-server": "^9.2.3",
     "gatsby": "next",
@@ -13,7 +12,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
-    "modularscale": "^2.0.1",
+    "modern-normalize": "^0.5.0",
     "polished": "^1.9.2",
     "prismjs": "^1.15.0",
     "react": "^16.4.0",
@@ -21,7 +20,6 @@
     "react-emotion": "^9.2.4",
     "react-helmet": "^5.2.0",
     "typeface-libre-baskerville": "^0.0.54",
-    "typeface-libre-franklin": "^0.0.54",
     "typeface-roboto": "^0.0.54",
     "typeface-roboto-mono": "^0.0.54"
   },

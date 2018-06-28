@@ -1,44 +1,35 @@
-import ms from 'modularscale'
+// Modular scale
+const ms = (v = 0, r = Math.sqrt(2)) => Math.pow(r, v)
 
-const MS_SCALE = 'augmented fourth'
+// Space separated values
+const ssv = f => (...v) => v.map(f).join(' ')
 
 const theme = {
   colors: {
     primary: '#222',
-    secondary: '#fff',
-    tertiary: '#777',
-    yellow: 'gold',
+    secondary: '#777',
+    tertiary: '#fff',
   },
   lineHeights: {
-    xWide: 2,
-    wide: 1.6,
-    medium: 1.4,
-    base: 1.3,
-    tight: 1.15,
+    solid: 1,
+    title: 1.25,
+    code: 1.35,
+    copy: 1.8,
   },
   fontFamilies: {
-    serif: "'Libre Baskerville', sans-serif",
-    sans: 'Roboto, monospace',
     mono: "'Roboto Mono', monospace",
+    sans: 'Roboto, sans-serif',
+    serif: "'Libre Baskerville', sans-serif",
   },
-  fontSize: step => ms(step / 2, MS_SCALE) + 'rem',
+  fontSize: s => ms(s / 2) + 'rem',
   mediaSizes: {
-    xSmall: '400px',
-    small: '500px',
+    s: '30rem',
     m: '48rem',
-    large: '900px',
-    xLarge: '1100px',
-    xxLarge: '1600px',
+    l: '60rem',
   },
-  radius: (...steps) =>
-    steps
-      .map(s => (typeof s === 'number' ? ms(s / 2, MS_SCALE) + 'rem' : s))
-      .join(' '),
-  spacing: (...steps) =>
-    steps
-      .map(s => (typeof s === 'number' ? ms(s, MS_SCALE) + 'rem' : s))
-      .join(' '),
-  transition: '200ms',
+  radius: ssv(s => (typeof s === 'number' ? ms(s / 2) + 'rem' : s)),
+  spacing: ssv(s => (typeof s === 'number' ? ms(s) + 'rem' : s)),
+  transition: '150ms',
 }
 
 theme.mediaQueries = Object.keys(theme.mediaSizes).reduce((acc, curr) => {

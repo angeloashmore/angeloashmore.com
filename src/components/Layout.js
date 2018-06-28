@@ -5,12 +5,10 @@ import { StaticQuery } from 'gatsby'
 import t from '../theme'
 import Header from './Header'
 
-import 'app-reset'
+import 'modern-normalize'
 import 'typeface-roboto'
 import 'typeface-roboto-mono'
-import 'typeface-libre-franklin'
 import 'typeface-libre-baskerville'
-import '../index.css'
 import '../syntax.css'
 
 const Layout = ({ children }) => (
@@ -50,7 +48,7 @@ const Layout = ({ children }) => (
 export default Layout
 
 const Container = styled.div`
+  -webkit-font-smoothing: antialiased;
   color: ${t.c.primary};
   font-family: ${t.ff.sans};
-  line-height: ${t.lh.base};
 `

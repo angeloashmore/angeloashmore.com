@@ -30,7 +30,7 @@ export default Header
 const Container = styled.header`
   display: flex;
   justify-content: center;
-  padding: ${t.s(1)} ${t.s(0)} 0;
+  padding: ${t.s(1, 0, '0')};
   margin-bottom: ${t.s(1)};
 
   ${t.mq.m} {
@@ -40,13 +40,12 @@ const Container = styled.header`
 `
 
 const NameLink = styled(Link)`
-  &:hover {
-    text-decoration: underline;
-  }
+  color: inherit;
 `
 
 const Name = styled.h1`
-  font-family: ${t.ff.mono};
+  font-family: ${t.ff.serif};
   font-size: ${t.f(2)};
   font-weight: 600;
+  margin: 0;
 `
