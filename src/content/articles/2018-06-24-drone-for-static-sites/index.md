@@ -27,8 +27,6 @@ It's better if you don't need to use Drone, trust me.
 
 With that out of the way, let's get on to the cool configuration stuff.
 
-![A nice photo](./image.jpg)
-
 # Setting up your `.drone.yml`
 
 Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum

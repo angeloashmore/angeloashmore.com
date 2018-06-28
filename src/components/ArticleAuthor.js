@@ -1,35 +1,54 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'react-emotion'
+import PropTypes from 'prop-types'
+import { StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import t from '../theme'
 
 const ArticleAuthor = ({
   articleDate,
   articleTimeToRead,
   avatar,
-  description,
-  name,
   ...props
 }) => (
-  <Container {...props}>
-    <Avatar src={avatar} alt={name} />
-    <Details>
-      <DetailsName>{name}</DetailsName>
-      <DetailsDescription>{description}</DetailsDescription>
-      <DetailsArticleDate>{articleDate}</DetailsArticleDate>
-      <DetailsArticleTimeToRead>
-        {articleTimeToRead} min read
-      </DetailsArticleTimeToRead>
-    </Details>
-  </Container>
+  <StaticQuery
+    query={graphql`
+      query AuthorQuery {
+        site {
+          siteMetadata {
+            authorName
+            authorDescription
+          }
+        }
+        avatar: file(sourceInstanceName: { eq: "images" }, base: { eq: "avatar.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Container {...props}>
+        <Avatar fluid={data.avatar.childImageSharp.fluid} alt={data.site.siteMetadata.authorName} />
+        <Details>
+          <DetailsName>{data.site.siteMetadata.authorName}</DetailsName>
+          <DetailsDescription>{data.site.siteMetadata.authorDescription}</DetailsDescription>
+          <DetailsArticleDate>{articleDate}</DetailsArticleDate>
+          <DetailsArticleTimeToRead>
+            {articleTimeToRead} min read
+          </DetailsArticleTimeToRead>
+        </Details>
+      </Container>
+    )}
+  />
 )
 
 ArticleAuthor.propTypes = {
   articleDate: PropTypes.string.isRequired,
   articleTimeToRead: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 }
 
 export default ArticleAuthor
@@ -52,7 +71,7 @@ const Container = styled.div`
   font-size: ${t.f(-1)};
 `
 
-const Avatar = styled.img`
+const Avatar = styled(Img)`
   border-radius: 100%;
   flex-grow: 0;
   flex-shrink: 0;

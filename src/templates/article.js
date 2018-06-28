@@ -19,8 +19,6 @@ const ArticleTemplate = ({ data }) => {
             articleDate={article.frontmatter.date}
             articleTimeToRead={article.timeToRead}
             avatar="https://www.gravatar.com/avatar/52f4cd57f86f9769ca7a9025a4e59d64"
-            description="Develop at Wall-to-Wall Studios"
-            name="Angelo Ashmore"
           />
           <StyledArticleTitle
             title={article.frontmatter.title}

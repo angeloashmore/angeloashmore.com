@@ -4,6 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'a11e',
     description: 'A collection of things',
+    authorName: 'Angelo Ashmore',
+    authorDescription: 'Developer at Wall-to-Wall Studios',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,6 +16,13 @@ module.exports = {
       options: {
         name: 'articles',
         path: path.resolve(__dirname, 'src', 'content', 'articles'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.resolve(__dirname, 'src', 'assets', 'images'),
       },
     },
     {

@@ -99,6 +99,6 @@ const Container = styled.div`
   }
 
   .gatsby-resp-image-link {
-    margin: ${t.s(2, '0')};
+    margin: ${t.s(3, '0')};
   }
 `
