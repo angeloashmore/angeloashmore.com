@@ -10,6 +10,8 @@ ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
 ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
 amet non magna. Donec id elit non mi porta gravida [at eget metus](/).
 
+![Take your static site for a nice stroll](./path.jpg)
+
 # But first, a disclaimer
 
 Before you run off to cancel your Netlify subscription and tweet all your
@@ -24,6 +26,8 @@ control. But maybe you don't.
 It's better if you don't need to use Drone, trust me.
 
 With that out of the way, let's get on to the cool configuration stuff.
+
+![A nice photo](./image.jpg)
 
 # Setting up your `.drone.yml`
 

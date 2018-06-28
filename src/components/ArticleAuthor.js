@@ -9,7 +9,7 @@ const ArticleAuthor = ({
   avatar,
   description,
   name,
-  ...props,
+  ...props
 }) => (
   <Container {...props}>
     <Avatar src={avatar} alt={name} />

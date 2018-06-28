@@ -97,4 +97,8 @@ const Container = styled.div`
   blockquote {
     margin: ${t.s('0', '0', 0)};
   }
+
+  .gatsby-resp-image-link {
+    margin: ${t.s(2, '0')};
+  }
 `
