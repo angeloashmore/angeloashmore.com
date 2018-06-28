@@ -19,7 +19,7 @@ const theme = {
   fontFamilies: {
     mono: "'Roboto Mono', monospace",
     sans: 'Roboto, sans-serif',
-    serif: "'Libre Baskerville', sans-serif",
+    serif: "'Libre Baskerville', serif",
   },
   fontSize: s => ms(s / 2) + 'rem',
   mediaSizes: {
