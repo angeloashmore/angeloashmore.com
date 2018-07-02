@@ -18,6 +18,10 @@ injectGlobal`
       font-size: 17px;
     }
   }
+
+  body {
+    overflow-y: hidden;
+  }
 `
 
 const Layout = ({ children }) => (
@@ -64,7 +68,6 @@ const Container = styled.div`
   background-color: ${t.c.bg};
   color: ${t.c.primary};
   font-family: ${t.ff.sans};
-  overflow-x: hidden;
   position: relative;
 `
 
