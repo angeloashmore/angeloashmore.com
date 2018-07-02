@@ -7948,6 +7948,10 @@ pngquant-bin@^4.0.0:
     execa "^0.10.0"
     logalot "^2.0.0"
 
+polished@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
+
 portfinder@^1.0.9:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.13.tgz#bb32ecd87c27104ae6ee44b5a3ccbf0ebb1aede9"
@@ -10269,13 +10273,13 @@ typeface-libre-baskerville@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-libre-baskerville/-/typeface-libre-baskerville-0.0.54.tgz#4f9fd7e0d0812f73291e70258498d647c3af892d"
 
-typeface-roboto-mono@^0.0.54:
+typeface-libre-franklin@^0.0.54:
   version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-roboto-mono/-/typeface-roboto-mono-0.0.54.tgz#78e706e0a4158b2b670ed3cdf2269e7a54e671cd"
+  resolved "https://registry.yarnpkg.com/typeface-libre-franklin/-/typeface-libre-franklin-0.0.54.tgz#bde5607b324ef0eb9ad3d6b1bb9405e4dd74094a"
 
-typeface-roboto@^0.0.54:
+typeface-space-mono@^0.0.54:
   version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.54.tgz#8f02c9a18d1cfa7f49381a6ff0d21ff061f38ad2"
+  resolved "https://registry.yarnpkg.com/typeface-space-mono/-/typeface-space-mono-0.0.54.tgz#0dd2fa58e0a3f50f5d9c2f3bbbc6246f2cfacb82"
 
 ua-parser-js@^0.7.18:
   version "0.7.18"

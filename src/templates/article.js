@@ -56,10 +56,10 @@ const Container = styled.article`
 `
 
 const StyledArticleAuthor = styled(ArticleAuthor)`
-  margin-bottom: ${t.s(1)};
+  margin: ${t.s(2, '0')};
 
   ${t.mq.m} {
-    margin-bottom: ${t.s(3)};
+    margin: ${t.s(3, '0')};
   }
 `
 

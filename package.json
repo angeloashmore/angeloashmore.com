@@ -18,14 +18,15 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "^2.1.1-beta.3",
     "modern-normalize": "^0.5.0",
+    "polished": "^1.9.3",
     "prismjs": "^1.15.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-emotion": "^9.2.4",
     "react-helmet": "^5.2.0",
     "typeface-libre-baskerville": "^0.0.54",
-    "typeface-roboto": "^0.0.54",
-    "typeface-roboto-mono": "^0.0.54"
+    "typeface-libre-franklin": "^0.0.54",
+    "typeface-space-mono": "^0.0.54"
   },
   "scripts": {
     "build": "gatsby build",

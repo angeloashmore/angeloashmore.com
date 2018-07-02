@@ -33,9 +33,11 @@ const Container = styled.div``
 
 const Title = styled.h2`
   font-size: ${t.f(4)};
-  font-weight: 600;
+  font-weight: 700;
   line-height: ${t.lh.title};
   margin: 0;
+  position: relative;
+  z-index: 1;
 
   ${t.mq.m} {
     font-size: ${t.f(5)};
@@ -45,9 +47,11 @@ const Title = styled.h2`
 const Subtitle = styled.h3`
   color: ${t.c.secondary};
   font-size: ${t.f(1)};
-  font-weight: normal;
+  font-weight: 500;
   line-height: ${t.lh.title};
   margin: ${t.s(-5, '0', '0')};
+  position: relative;
+  z-index: 1;
 
   ${t.mq.m} {
     font-size: ${t.f(2)};

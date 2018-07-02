@@ -77,6 +77,8 @@ const Avatar = styled(Img)`
   height: ${t.s(3)};
   margin-right: ${t.s(-1)};
   overflow: hidden;
+  transition-duration: ${t.t};
+  transition-property: height, width;
   width: ${t.s(3)};
 
   ${t.mq.m} {
@@ -99,8 +101,8 @@ const DetailsName = styled.p`
 
 const DetailsDescription = styled.p`
   font-size: ${t.f(-1)};
-  line-height: ${t.lh.copy};
-  margin: ${t.s(-5, '0')};
+  line-height: ${t.lh.title};
+  margin: ${t.s(-4, '0')};
 `
 
 const DetailsArticleDate = styled.span`

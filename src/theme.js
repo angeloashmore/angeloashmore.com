@@ -1,3 +1,5 @@
+import { transparentize } from 'polished'
+
 // Modular scale
 const ms = (v = 0, r = Math.sqrt(2)) => Math.pow(r, v)
 
@@ -6,19 +8,20 @@ const ssv = f => (...v) => v.map(f).join(' ')
 
 const theme = {
   colors: {
-    primary: '#222',
-    secondary: '#777',
-    tertiary: '#fff',
+    primary: transparentize(0.2, '#000'),
+    secondary: transparentize(0.5, '#222'),
+    tertiary: '#eae8e2',
+    bg: '#fff'
   },
   lineHeights: {
     solid: 1,
     title: 1.25,
     code: 1.35,
-    copy: 1.8,
+    copy: 1.7,
   },
   fontFamilies: {
-    mono: "'Roboto Mono', monospace",
-    sans: 'Roboto, sans-serif',
+    mono: "'Space Mono', monospace",
+    sans: "'Libre Franklin', sans-serif",
     serif: "'Libre Baskerville', serif",
   },
   fontSize: s => ms(s / 2) + 'rem',

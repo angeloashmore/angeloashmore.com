@@ -10,7 +10,7 @@ ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
 ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
 amet non magna. Donec id elit non mi porta gravida [at eget metus](/).
 
-![Take your static site for a nice stroll](./path.jpg)
+![Factory](./path.jpg)
 
 # But first, a disclaimer
 
