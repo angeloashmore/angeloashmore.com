@@ -6,7 +6,10 @@ import t from '../theme'
 
 const ArticleTitle = ({ title, subtitle, ...props }) => (
   <Container {...props}>
-    <Title>{title}</Title>
+    <Title>
+      <TitleHighlight />
+      <TitleText>{title}</TitleText>
+    </Title>
     {subtitle && <Subtitle>{subtitle}</Subtitle>}
   </Container>
 )
@@ -32,17 +35,42 @@ export const fragment = graphql`
 const Container = styled.div``
 
 const Title = styled.h2`
+  display: inline-block;
   font-size: ${t.f(4)};
   font-weight: 700;
   line-height: ${t.lh.title};
   margin: 0;
   position: relative;
-  z-index: 1;
 
   ${t.mq.m} {
     font-size: ${t.f(5)};
   }
 `
+
+const TitleText = styled.span`
+  position: relative;
+  z-index: 1;
+`
+
+const TitleHighlight = styled.div`
+  background: white;
+  bottom: -10%;
+  left: -2%;
+  position: absolute;
+  right: -2%;
+  top: -10%;
+  transform: rotate(-7.5deg) translateX(-5%);
+`
+
+// const TitleHighlight = styled.div`
+//   background: yellow;
+//   bottom: 5%;
+//   left: -2%;
+//   position: absolute;
+//   right: -2%;
+//   top: 60%;
+//   transform: translate(-0%, 0%);
+// `
 
 const Subtitle = styled.h3`
   color: ${t.c.secondary};

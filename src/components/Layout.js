@@ -64,12 +64,14 @@ const Container = styled.div`
   background-color: ${t.c.bg};
   color: ${t.c.primary};
   font-family: ${t.ff.sans};
+  overflow-x: hidden;
   position: relative;
 `
 
 const Background = styled.div`
   background-color: ${t.c.tertiary};
   height: 90vh;
+  min-height: 35rem;
   left: -25vw;
   position: absolute;
   right: -25vw;

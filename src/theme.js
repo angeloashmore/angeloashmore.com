@@ -8,9 +8,9 @@ const ssv = f => (...v) => v.map(f).join(' ')
 
 const theme = {
   colors: {
-    primary: transparentize(0.2, '#000'),
-    secondary: transparentize(0.5, '#222'),
-    tertiary: '#eae8e2',
+    primary: transparentize(0.1, '#000'),
+    secondary: transparentize(0.35, '#000'),
+    tertiary: transparentize(0.4, '#eae8e2'),
     bg: '#fff'
   },
   lineHeights: {

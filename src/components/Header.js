@@ -73,7 +73,11 @@ const NavItems = styled.ul`
 const NavItem = styled.li`
   display: inline-block;
   list-style: none;
-  margin-left: ${t.s(1)};
+  margin-left: ${t.s(0)};
+
+  ${t.mq.m} {
+    margin-left: ${t.s(1)};
+  }
 `
 
 const NavItemLink = styled(Link)`

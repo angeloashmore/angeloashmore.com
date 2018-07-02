@@ -90,6 +90,12 @@ const Container = styled.div`
     margin: ${t.s('0', '0', 0)};
   }
 
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
   .gatsby-resp-image-link {
     margin: ${t.s(0, '0')};
 

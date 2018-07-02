@@ -10,7 +10,7 @@ ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
 ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit
 amet non magna. Donec id elit non mi porta gravida [at eget metus](/).
 
-![Factory](./path.jpg)
+![Factory](https://pagesxyz.s3.eu-west-2.amazonaws.com/pages/screenshot/image/752/thumb_screencapture-sketchapp-pricing-2018-06-13-23_26_52.jpg)
 
 # But first, a disclaimer
 
